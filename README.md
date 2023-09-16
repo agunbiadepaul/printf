@@ -1,4 +1,5 @@
-> #0x11. C - printf
+# 0x11. C - printf
+> 
 > For this project, we expect you to look at these concepts:
 > > - Group Projects
 > > - Pair Programming - How To
