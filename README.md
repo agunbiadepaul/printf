@@ -2,9 +2,9 @@
 
 This is a printf collaboration project by Gaoso Christian and Agunbiade Paul
 
-> For this project, we expect you to look at these concepts:
+> For this project, we undertook the following  concepts:
 >
-> > - Group Projects
+> > - Group Project
 > > - Pair Programming - How To
 > > - Flowcharts
 > > - Technical Writing
