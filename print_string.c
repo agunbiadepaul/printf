@@ -9,7 +9,7 @@ void print_string(va_list pcargs, int *numb_of_chars_printed)
 {
 	char *str = va_arg(pcargs, char *);
 
-	if(!str)
+	if (!str)
 		str = "(null)";
 
 	while (*str)
