@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+=======
+>>>>>>> 9aeaf3d831bd6ec4b61ae6aa7ae6a909888ba50b
 #include "main.h"
 
 /* Functions prototypes used */
@@ -29,6 +32,7 @@ int _printf(const char *format, ...)
 
 			switch (*format)
 			{
+<<<<<<< HEAD
 				case 'c':
 					numb_of_chars_printed += pc_putchar(va_arg(pcargs, int));
 					break;
@@ -54,6 +58,18 @@ int _printf(const char *format, ...)
 					numb_of_chars_printed += pc_putchar('%');
 					numb_of_chars_printed += pc_putchar(*format);
 					break;
+=======
+				write(1, "%", 1);
+				numb_of_chars_printed++;
+			}
+			else if (*format == 'd' || *format == 'i')
+			 /* Call the print_int function for 'd' or 'i' */
+				print_int(pcargs, &numb_of_chars_printed);
+			else
+			{
+				write(1, &(*format), 1);
+				numb_of_chars_printed++;
+>>>>>>> 9aeaf3d831bd6ec4b61ae6aa7ae6a909888ba50b
 			}
 		}
 		else
