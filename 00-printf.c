@@ -5,6 +5,7 @@
  * Return: The number of characters (not including the null byte)
  * that were printed.
  */
+int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	va_list pcargs;
