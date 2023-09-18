@@ -29,23 +29,8 @@ int _printf(const char *format, ...)
 
 			else if (*format == '%')
 			{
-				format++;
-				if (*format == '\0')
-				{
-					write(1, "%", 1);
-					numb_of_chars_printed++;
-				}
-				else if (*format == '%')
-				{
-					write(1, &(*format), 1);
-					numb_of_chars_printed++;
-				}
-				else
-				{
-					write(1, "%", 1);
-					write(1, format, 1);
-					numb_of_chars_printed += 2;
-				}
+				write(1, "%", 1);
+				numb_of_chars_printed++;
 			}
 			else if (*format == 'd' || *format == 'i') /* print_int ftn call */
 				print_int(pcargs, &numb_of_chars_printed);
