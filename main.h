@@ -3,8 +3,11 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int _printf(const char *format, ...);
-int _putchar(char c);
+int _print_string(char *str);
+int pc_putchar(int c);
 
 #endif /* _MAIN_H_ */
