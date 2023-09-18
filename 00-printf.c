@@ -36,7 +36,8 @@ int _printf(const char *format, ...)
 				print_int(pcargs, &numb_of_chars_printed);
 			else
 			{
-				write(1, &(*format), 1);
+				write(1, "%", 1);
+				write(1, format, 1);
 				numb_of_chars_printed++;
 			}
 		}
