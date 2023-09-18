@@ -1,5 +1,3 @@
-#include <unistd.h>
-#include <stdarg.h>
 #include "main.h"
 /**
  * _printf - Generates output in accordance with a format.
@@ -46,6 +44,9 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				numb_of_chars_printed++;
 			}
+			else if (*format == 'd' || *format == 'i')
+			 /* Call the print_int function for 'd' or 'i' */
+				print_int(pcargs, &numb_of_chars_printed);
 			else
 			{
 				write(1, &(*format), 1);

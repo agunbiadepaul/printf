@@ -5,6 +5,6 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int _putchar(char c);
+void print_int(va_list args, int *printed_chars);
 
 #endif /* _MAIN_H_ */
