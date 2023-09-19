@@ -16,11 +16,9 @@ int _printf(const char *format, ...)
 
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && format[1] != '\0')
 		{
 			format++; /* pass the '%' now */
-			if (*format == '\0')
-				break;
 			if (*format == 'c')
 			{
 				char c = va_arg(pcargs, int); /* char becomes an int */
@@ -45,11 +43,19 @@ int _printf(const char *format, ...)
 				numb_of_chars_printed++;
 			}
 			else if (*format == 'd' || *format == 'i')
-			 /* Call the print_int function for 'd' or 'i' */
+			{/* Call the print_int function for 'd' or 'i' */
 				print_int(pcargs, &numb_of_chars_printed);
+			}
+			else if (*format == 'b')
+			{
+				unsigned int binary_arg = va_arg(pcargs, unsigned int);
+
+				print_binary(binary_arg, &numb_of_chars_printed);
+			}
 			else
 			{
-				write(1, &(*format), 1);
+				write(1, "%", 1);
+				write(1, format, 1);
 				numb_of_chars_printed++;
 			}
 		}
