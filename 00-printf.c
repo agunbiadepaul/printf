@@ -34,6 +34,11 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'd' || *format == 'i') /* print_int ftn call */
 				print_int(pcargs, &numb_of_chars_printed);
+			else if (*format == 'b')
+			{
+				unsigned int binary_arg = va_arg(pcargs, unsigned int);
+				 print_binary(binary_arg, &numb_of_chars_printed);
+			}
 			else
 			{
 				write(1, "%", 1);
