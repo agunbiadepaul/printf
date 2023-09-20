@@ -34,10 +34,36 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'd' || *format == 'i') /* print_int ftn call */
 				print_int(pcargs, &numb_of_chars_printed);
+
 			else if (*format == 'b')
 			{
 				unsigned int binary_arg = va_arg(pcargs, unsigned int);
-				 print_binary(binary_arg, &numb_of_chars_printed);
+
+				print_binary(binary_arg, &numb_of_chars_printed);
+			}
+			else if (*format == 'u')
+			{
+				unsigned int u_arg = va_arg(pcargs, unsigned int);
+
+				print_uint(u_arg, &numb_of_chars_printed);
+			}
+			else if (*format == 'o')
+			{
+				unsigned int o_arg = va_arg(pcargs, unsigned int);
+
+				print_octal(o_arg, &numb_of_chars_printed);
+			}
+			else if (*format == 'x')
+			{
+				unsigned int x_arg = va_arg(pcargs, unsigned int);
+
+				print_hex(x_arg, 0, &numb_of_chars_printed);
+			}
+			else if (*format == 'X')
+			{
+				unsigned int X_arg = va_arg(pcargs, unsigned int);
+
+				print_hex(X_arg, 1, &numb_of_chars_printed);
 			}
 			else
 			{
